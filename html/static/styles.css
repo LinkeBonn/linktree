@@ -11,6 +11,19 @@
   src: url('./fonts/Inter-Regular.ttf') format('truetype');
 }
 
+/*Color Vars */
+:root{
+  --primary-red-full: #b00000;
+  --secondary-red-full: #b71c1c;
+  --primary-green-full: #388e3c;
+  --secondary-green-full: #009688;
+  --primary-violet-full: #8e24aa;
+  --secondary-violet-full: #d81b60;
+  --primary-blue-full: #1976d2;
+  --secondary-blue-full: #01579b;
+}
+
+
 html, body {
   margin: 0;
   padding: 0 0px;
@@ -44,7 +57,7 @@ body {
   margin-top: 10px;
   font-size: 1.2rem;
   font-style: italic;
-  color: #6F003C;
+  color: #fff;
 }
 
 .board {
@@ -100,7 +113,7 @@ a.flyer i {
 .youtube    { background: #FF0000; color: #ffffff; }
 .flickr     { background: #00617F; color: #ffffff; }
 .tiktok     { background: #000000; color: #ffffff; }
-.office     { background: #FF0000; color: #000000; }
+.office     { background: #FF0000; color: #fff; }
 .github     { background: #24292e; color: #ffffff; }
 
 .logo-icon {
