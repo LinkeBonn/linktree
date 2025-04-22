@@ -1,0 +1,124 @@
+/* Custom Fonts */
+  @font-face {
+    font-family: 'WorkSans';
+    src: url('./fonts/WorkSans-Black.ttf') format('truetype');
+    font-weight: bold;
+  }
+
+  @font-face {
+    font-family: 'Inter';
+    src: url('./fonts/Inter-Regular.ttf') format('truetype');
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: white;
+  }
+
+  .background {
+    background: url('./image/schwarzes-brett.jpg') center center no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  .header {
+    text-align: center;
+    padding-top: 40px;
+    font-family: 'WorkSans', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FF0000;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  }
+
+  .slogan {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #6F003C;
+  }
+
+  .board {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 60px 20px 100px 20px;
+    gap: 40px;
+  }
+
+  a.flyer {
+    display: block;
+    text-decoration: none;
+    padding: 25px 20px;
+    width: 220px;
+    transform: rotate(calc(-6deg + 12deg * var(--random)));
+    transition: transform 0.2s ease-in-out;
+    text-align: center;
+    text-shadow: 2px 2px 3px black;
+    font-size: 1.1rem;
+    position: relative;
+    font-weight: bold;
+    border: 2px solid #000;
+    box-shadow: 4px 4px 12px rgba(0,0,0,0.5);
+  }
+
+  a.flyer:hover {
+    transform: rotate(1deg) scale(1.05);
+    z-index: 10;
+  }
+
+  a.flyer i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 3px black;
+  }
+
+  /* Flyer spezifische Farben */
+  .website    { background: #9c27b0; color: #ffffff; }
+  .facebook   { background: #3b5998; color: #ffffff; }
+  .twitter    { background: #00B19C; color: #ffffff; }
+  .mastodon   { background: #FF0000; color: #ffffff; }
+  .instagram  { background: #6F003C; color: #ffffff; }
+  .youtube    { background: #FF0000; color: #ffffff; }
+  .flickr     { background: #00617F; color: #ffffff; }
+  .tiktok     { background: #000000; color: #ffffff; }
+  .office     { background: #FFD700; color: #000000; }
+
+  /* Optional: dunkler Rand bei hellen Flyern */
+  .flyer {
+    border-radius: 6px;
+  }
+
+  @media (max-width: 768px) {
+    .board {
+      flex-direction: column;
+      align-items: center;
+    }
+    a.flyer {
+      width: 90%;
+      transform: none !important;
+      font-size: 1rem;
+    }
+  }
+  
+  @keyframes wobble {
+    0% {
+      transform: rotate(-2deg) translateY(-1px);
+    }
+    50% {
+      transform: rotate(2deg) translateY(1px);
+    }
+    100% {
+      transform: rotate(-2deg) translateY(-1px);
+    }
+  }
