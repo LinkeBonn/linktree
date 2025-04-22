@@ -14,15 +14,18 @@ Ein digitaler Aushang im Stil einer schwarzen Tafel – gestaltet mit Liebe, Hal
 ## 📂 Struktur
 
 ```
-/
-├── index.html               # Hauptseite
-├── static/
-│   ├── styles.css           # Alle Styles hier
-│   ├── script.js            # Zufällige Animationen & Wackelbewegung
-│   ├── image/
-│   │   └── schwarzes-brett.jpg  # Hintergrundbild
-│   └── fonts/               # Custom Fonts (Inter, WorkSans)
-├── docker-compose.yml       # Deployment über nginx + Traefik
+├── docker-compose.yml
+├── html
+│   ├── index.html
+│   └── static
+│       ├── fonts
+│       │   ├── Inter-Regular.ttf
+│       │   └── WorkSans-Black.ttf
+│       ├── image
+│       │   └── schwarzes-brett.jpg
+│       ├── script.js
+│       └── styles.css
+└── README.md
 ```
 
 ## 🚀 Deploy
