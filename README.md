@@ -3,6 +3,10 @@
 Dies ist der offizielle Linktree des Kreisverbands DIE LINKE Bonn.  
 Ein digitaler Aushang im Stil einer schwarzen Tafel – gestaltet mit Liebe, Haltung und einem Hauch Retro-Charme.
 
+## 🎬 Demo
+
+https://tree.linkebonn.de
+
 ## 🚩 Features
 
 - ✊ Übersicht aller Social-Media-Kanäle & Plattformen

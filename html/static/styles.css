@@ -92,8 +92,8 @@
   .youtube    { background: #FF0000; color: #ffffff; }
   .flickr     { background: #00617F; color: #ffffff; }
   .tiktok     { background: #000000; color: #ffffff; }
-  .office     { background: #FFD700; color: #000000; }
-
+  .office     { background: #FF0000; color: #000000; }
+  .github     { background: #24292e; color: #ffffff; }
   /* Optional: dunkler Rand bei hellen Flyern */
   .flyer {
     border-radius: 6px;
