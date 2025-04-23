@@ -1,23 +1,44 @@
-window.addEventListener('DOMContentLoaded', () => {
-    const board = document.querySelector('.board');
-    const flyers = Array.from(board.children);
-  
-    // Zufällige Reihenfolge
-    flyers.sort(() => Math.random() - 0.5);
-  
-    // Neu anordnen
-    flyers.forEach(flyer => board.appendChild(flyer));
-  });
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    const flyers = document.querySelectorAll(".flyer");
-  
-    flyers.forEach(flyer => {
-      // Zufällige Startverzögerung und Animation
-      const delay = (Math.random() * 4).toFixed(2); // 0–4 Sekunden
-      const duration = (3 + Math.random() * 2).toFixed(2); // 3–5 Sekunden
-  
-      flyer.style.animation = `wobble ${duration}s ease-in-out ${delay}s infinite alternate`;
-    });
-  });
-  
+class FlyerLink extends HTMLElement {
+    static get observedAttributes() {
+        return ['href', 'icon', 'label', 'random', 'colorclass', 'title'];
+    }
+
+    constructor() {
+        super();
+    }
+
+    connectedCallback() {
+        this.render();
+    }
+
+    attributeChangedCallback() {
+        this.render();
+    }
+
+    render() {
+        const href = this.getAttribute('href') || '#';
+        const icon = this.getAttribute('icon') || 'fas fa-link';
+        const label = this.getAttribute('label') || 'Link';
+        const title = this.getAttribute('title') || '';
+        const offset = this.getAttribute('offset') || "false";
+
+        var margin = offset === "true" ? Math.random() * (15 - 5) + 5 : 0;
+        var direction =  Math.random() < 0.5 ? '-' : '';
+
+
+        this.innerHTML = `
+        <div class="flyer-wrapper" style="margin-left: ${direction}${margin}%">
+        <a class="flyer" href="${href}" target="_blank" title="${title}">
+          <i class="${icon}"></i>
+          ${label}
+        </a>
+        </div>
+      `;
+    }
+}
+
+customElements.define('flyer-link', FlyerLink);
+
+
+
+

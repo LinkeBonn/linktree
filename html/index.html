@@ -1,65 +1,40 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>Die Linke Bonn – Linktree</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="./static/image/favicon.png">
-
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- CSS Custom -->  
-  <link rel="stylesheet" href="./static/styles.css">
-  <!-- JS Custom -->    
-  <script src="static/script.js"></script>
-
-  </style>
+    <meta charset="UTF-8">
+    <title>Die Linke Bonn – Linktree</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./static/image/favicon.png">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!-- CSS Custom -->
+    <link rel="stylesheet" href="./static/styles.css">
+    <!-- JS Custom -->
+    <script src="static/script.js" defer></script>
 </head>
 <body>
-  <div class="background">
+<div class="background">
     <div class="header">
-      <img src="./static/image/favicon.png" alt="Logo" class="logo-icon">
-      Finde uns hier
+        <img src="./static/image/favicon.png" alt="Logo" class="logo-icon">
+        Finde uns hier
     </div>
     <div class="slogan">Alle Kanäle – eine Richtung: solidarisch & konsequent links.</div>
 
     <div class="board">
-        <a class="flyer website" href="https://www.dielinke-bonn.de/" target="_blank" style="--random: 0.1;">
-          <i class="fas fa-globe"></i>
-          Website
-        </a>
-        <a class="flyer facebook" href="https://www.facebook.com/DieLinke.KreisverbandBonn" target="_blank" style="--random: 0.3;">
-          <i class="fab fa-facebook"></i>
-          Facebook
-        </a>
-        <a class="flyer github" href="https://github.com/LinkeBonn" target="_blank" style="--random: 0.65;">
-          <i class="fab fa-github"></i>
-          GitHub
-        </a>        
-        <a class="flyer tiktok" href="https://www.tiktok.com/@dielinkebonn" target="_blank" style="--random: 0.5;">
-          <i class="fab fa-tiktok"></i>
-          TikTok
-        </a>
-        <a class="flyer mastodon" href="https://nrw.social/@dielinkebonn" target="_blank" style="--random: 0.7;">
-          <i class="fab fa-mastodon"></i>
-          Mastodon
-        </a>
-        <a class="flyer instagram" href="https://www.instagram.com/dielinke.bonn" target="_blank" style="--random: 0.2;" title="Folge uns auf Instagram">
-          <i class="fab fa-instagram"></i>
-          Instagram
-        </a>
-        <a class="flyer youtube" href="https://www.youtube.com/@LinkeBonn" target="_blank" style="--random: 0.4;">
-          <i class="fab fa-youtube"></i>
-          YouTube
-        </a>
-        <a class="flyer office" href="https://www.google.com/maps/place/Die+Linke+Kreisverband+Bonn/@50.739551,7.0893613,3a,75y,33.07h,95.2t/data=!3m7!1e1!3m5!1sIHY-8_JRnJ8YdtWBR49tiQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-5.202197751214143%26panoid%3DIHY-8_JRnJ8YdtWBR49tiQ%26yaw%3D33.07029761685628!7i16384!8i8192!4m15!1m8!3m7!1s0x47bee1bc9ffb3517:0x344e1a476408e238!2sVorgebirgsstra%C3%9Fe+24,+53111+Bonn!3b1!8m2!3d50.7396487!4d7.0894813!16s%2Fg%2F11q2nf6q9f!3m5!1s0x47bee1bc9fe4b449:0x56d73aa1309cb660!8m2!3d50.7396487!4d7.0894813!16s%2Fg%2F1thclxjk?entry=ttu&g_ep=EgoyMDI1MDQxNi4xIKXMDSoASAFQAw%3D%3D" target="_blank" style="--random: 0.85;">
-            <i class="fas fa-map-marked-alt"></i>
-            Unser Büro
-          </a>        
-        <a class="flyer flickr" href="https://www.flickr.com/photos/dielinke_nrw/albums" target="_blank" style="--random: 0.6;">
-          <i class="fab fa-flickr"></i>
-          Flickr
-        </a>
+        <flyer-link href="https://www.dielinke-bonn.de/" icon="fas fa-globe" label="Website"></flyer-link>
+        <flyer-link href="https://www.facebook.com/DieLinke.KreisverbandBonn" icon="fab fa-facebook"
+                    label="Facebook" offset="true"></flyer-link>
+        <flyer-link href="https://github.com/LinkeBonn" icon="fab fa-github" label="GitHub"></flyer-link>
+        <flyer-link href="https://www.tiktok.com/@dielinkebonn" icon="fab fa-tiktok" label="TikTok" offset="true"></flyer-link>
+        <flyer-link href="https://nrw.social/@dielinkebonn" icon="fab fa-mastodon" label="Mastodon"></flyer-link>
+        <flyer-link href="https://www.instagram.com/dielinke.bonn" icon="fab fa-instagram"
+                    label="Instagram" offset="true"></flyer-link>
+        <flyer-link href="https://www.youtube.com/@LinkeBonn" icon="fab fa-youtube" label="YouTube"></flyer-link>
+        <flyer-link href="https://www.google.com/maps/place/..." icon="fas fa-map-marked-alt"
+                    label="Unser Büro" offset="true"></flyer-link>
+        <flyer-link href="https://www.flickr.com/photos/dielinke_nrw/albums" icon="fab fa-flickr"
+                    label="Flickr"></flyer-link>
     </div>
+</div>
 </body>
 </html>
