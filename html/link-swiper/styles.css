@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url("../static/image/raufaser.png") no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .swipe-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-stack {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 20px;
+  }
+  
+  .card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #FF0000, #6F003C);
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 40px;
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 36px;
+    width: auto;
+  }
+  
+  .profile {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid white;
+    margin-top: 20px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.25);
+  }
+  
+  
+  .card-content {
+    margin-top: 35%;
+    margin-bottom: 12%;
+    text-align: center;
+  }
+  
+  .card-content i {
+    display: block;
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+  
+  .card-content span {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .card a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+  }
+  
+  .card i {
+    font-size: 64px;
+    margin-bottom: 16px;
+  }
+  
+  .card span {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .swipe-left {
+    transform: translateX(-400px) rotate(-15deg);
+    opacity: 0;
+  }
+  
+  .swipe-right {
+    transform: translateX(400px) rotate(15deg);
+    opacity: 0;
+  }
+  
+  .swipe-buttons {
+    display: flex;
+    justify-content: space-around;
+    width: 160px;
+  }
+  
+  .swipe-buttons button {
+    background-color: white;
+    border: 2px solid #999;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swipe-buttons button:hover {
+    background-color: #ddd;
+  }
+  
+  
+  .swipe-buttons button:hover {
+    background-color: #eee;
+  }
+  
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-100%) scale(0.95);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .card.enter-from-top {
+    animation: slide-in-top 0.4s ease-out;
+  }
+  

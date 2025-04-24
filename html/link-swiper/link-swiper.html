@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="./static/image/favicon.png">
+  <title>Linktree Swipe</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="swipe-container">
+    <div class="card-stack" id="card-stack">
+        <div class="card" id="current-card">
+            <!-- Partei-Logo -->
+            <img id="card-logo" class="logo" src="../static/image/PdL_Logo.png" alt="Logo">
+          
+            <!-- Screenshot / Profilbild -->
+            <img id="card-image" class="profile" src="static/image/default.jpg" alt="Vorschaubild">
+          
+            <!-- Link-Inhalt -->
+            <a id="card-link" href="#" target="_blank">
+              <div class="card-content">
+                <i id="card-icon" class="fas fa-link"></i>
+                <span id="card-label">Link</span>
+              </div>
+            </a>
+          </div>
+    </div>
+    <div class="swipe-buttons">
+        <button id="dislike">👎</button>
+        <button id="like">👍</button>        
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
